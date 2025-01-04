@@ -1,5 +1,5 @@
 # src/videoutil/__init__.py
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from .generate import generate_videos
 from .combine import combine_videos
