@@ -7,6 +7,8 @@ A command-line utility for video file operations, including:
 
 ## Installation
 
+You need to install FFmpeg in your system first.
+
 ```bash
 pip install videoutil
 ```
