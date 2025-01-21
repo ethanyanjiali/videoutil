@@ -5,6 +5,7 @@ from . import generate as generate_module
 from . import rename as rename_module
 from . import combine as combine_module
 from . import compress as compress_module
+from . import audio as audio_module
 
 def ensure_ffmpeg_installed():
     """Check if ffmpeg is installed and accessible, and display its path."""
@@ -39,6 +40,12 @@ def combine():
 def compress():
     """Compress video pairs in a directory."""
     compress_module.compress_videos()
+
+
+@main.command()
+def audio():
+    """adjust volume and frequency"""
+    audio_module.adjust_audio()
 
 if __name__ == '__main__':
     main()
