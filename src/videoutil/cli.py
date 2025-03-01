@@ -1,5 +1,4 @@
 import click
-from pathlib import Path
 from shutil import which
 from . import generate as generate_module
 from . import rename as rename_module
@@ -7,6 +6,7 @@ from . import combine as combine_module
 from . import compress as compress_module
 from . import audio as audio_module
 from . import connect as connect_module
+from . import split as split_module
 
 def ensure_ffmpeg_installed():
     """Check if ffmpeg is installed and accessible, and display its path."""
@@ -48,6 +48,10 @@ def audio():
     """Adjust volume and frequency"""
     audio_module.adjust_audio()
 
+@main.command()
+def split():
+    """Split a video into multiple chunks."""
+    split_module.split_videos()
 
 @main.command()
 def connect():
