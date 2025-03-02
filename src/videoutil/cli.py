@@ -46,7 +46,7 @@ def compress():
 @main.command()
 def audio():
     """Adjust volume and frequency"""
-    audio_module.adjust_audio()
+    audio_module.audio_main()
 
 @main.command()
 def split():
